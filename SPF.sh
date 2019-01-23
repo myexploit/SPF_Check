@@ -1,5 +1,5 @@
 #!/bin/sh
-read -p "Feed it your PS file:" Feed
+read -p "Feed it your domain name:" Feed
 python sublist3r.py -v -o output1 -d $Feed
 sed 's/^www.//' output1 >> output2
 for LINE in `cat output2`
